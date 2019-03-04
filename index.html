@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HCA Internship Project</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="all">
 </head>
 
 <body class=>
@@ -17,7 +18,10 @@
         <a class="nav-link-4" href="http://"> Career Opportunities </a>
         <img class="nav-link-5" src="./assets/magnifying.png" alt="" height="30em" width="auto">
         <img class="nav-link-6" src="./assets/telephone.png" alt="" height="30em" width="auto">
-        <img class="nav-link-7" src="./assets/user.png" alt="" height="30em" width="auto">
+        <!-- <img class="nav-link-7" src="./assets/user.png" alt="" height="30em" width="auto"> -->
+        <div>
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        </div>
     </nav>
     <header class="header-grid">
         <h1 class="header-info-h1"><span class="headline">Services We Offer</span></h1>
@@ -73,14 +77,19 @@
         </section>
 
         <aside class="main-aside">
-            <a href="https://placeholder.com"><img src="https://via.placeholder.com/272x252" alt=""></a>
-            <p class="aside-p"></p>
-            <button type="button" class="btn btn-dark">Take Action</button>
+            <a class="aside-img" href="https://placeholder.com"><img src="https://via.placeholder.com/272x252" alt=""></a>
+            <p id="aside-p"> </p>
+            <div class="take-action-btn">
+                <label for="take-action">Take Action</label>
+                <button type="button" class="btn btn-dark">Take Action</button>
+            </div>
         </aside>
 
     </main>
-
-    <script defer src="./js/index.js"></script>
+    <script src='internship-exercise/node_modules/bootstrap/dist/js/bootstrap.min.js'></script>
+    <script type="text/javascript" src="internship-exercise/node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script> -->
+    <script src="js/index.js"></script>
 </body>
 
 </html>
