@@ -4,10 +4,7 @@ I think grid makes it so much easier for placement once you learn the nitty grit
 beast. There's no need to constantly set margins between elements due to the use of grid gap.
 
 Using Bootstrap and all the other dependencies locally rather than using CDN's or through 
-the use of webpacks in the Vue.js frameworks has made it a challenge.  Every bootstrap
-element would not work for me. I tried installing everything I needed an then some but
-nothing would render to the DOM. Even previously used boilerplates for modals and 
-glyphicons would not work. -->
+the use of webpacks in the Vue.js frameworks has made it a challenge.-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,6 +15,7 @@ glyphicons would not work. -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HCA Internship Project</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./node_modules/octicons/build/build.css">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" media="all">
 </head>
 
@@ -34,12 +32,10 @@ glyphicons would not work. -->
         <img class="nav-link-6" src="./assets/telephone.png" alt="" height="30em" width="auto">
         <!-- <img class="nav-link-7" src="./assets/user.png" alt="" height="30em" width="auto"> -->
         <!-- Here is the glyphicon that I tried to use but after following the directions on
-        the Bootsrap site, it would not render. I think it has to do with the local files used
-        for linking the bootstrap modules.  I read that some of the files can have errors in the 
-        code when unzipping the file, so I deleted the folder and tried installing bootstrap 3 and 
-        4 again and again, but it just didn't want to work for me.  -->
+        the Bootsrap site, it would not render. Through further examination, bootstrap dropped
+        free support with glyphicons so I imported octicons through npm.  -->
         <a href="#">
-            <span class="glyphicon glyphicon-user"></span>
+            <span class="octicon octicon-person"> </span>
         </a>
     </nav>
     <header class="header-grid">
@@ -51,7 +47,9 @@ glyphicons would not work. -->
         <h2 class="main-item-2">Aside Title</h2>
         <!-- I broke down the site into 3 sections for services.  I did this to ensure that I could have the proper 
         placement of each section when I set up the grid templates.  As you can see, the hierarchy of the header tags
-        go from greater size to least just like what you have in your example.   -->
+        go from greater size to least just like what you have in your example. Once I learn SCSS, and the proper use 
+        of nesting, I would like to redo the styling with minimal coding imput through the use of variables, imports,
+        mixins.  -->
         <section class="services-1">
             <div class="service-listing-1">
                 <h3>Sport Medicine Wellness</h3>
@@ -105,8 +103,6 @@ glyphicons would not work. -->
             <p id="aside-p">
                 <!-- I used DOM manipulation to incorporate the loren ipsum into this aside area of the page. -->
             </p>
-            <!-- You will notice that the contact information located within the modal is rendering to the page.  As I said
-            before, bootstrap would just not function for me the way I would have liked it to. -->
             <div class="take-action">
                 <label class="modal-label" for="#contactModal">Take Action</label>
                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#contactModal">
@@ -145,13 +141,14 @@ glyphicons would not work. -->
     <!-- Since the index.html file is read from top to bottom, the need to have the scripts at the bottom
     is key to making sure that everything has been parsed over before the functionality of the page is rendered
     through the script files.  jQuery is required before the bootstrap script is read, as well as tether. Once
-    those script files are read, bootstrap can become fully functional (at least not in my case). After that, the 
-    index.js file is read and with the script dependencies activated so that the jQuery and bootstrap functions
-    can be rendered. -->
+    those script files are read, bootstrap can become fully functional. After that, the index.js file is read and 
+    with the script dependencies activated so that the jQuery and bootstrap functions can be rendered. -->
     <script type="text/javascript" src="./node_modules/jquery/dist/jquery.js"></script>
-    <script src="./node_modules/tether/dist/js/tether.js"></script>
+    <script type="text/javascript" src="./node_modules/tether/dist/js/tether.js"></script>
+    <script src="./node_modules/octicons/build/data.json"></script>
+    <script type="text/javascript" src="./node_modules/octicons/index.js"></script>
     <script type="text/javascript" src='./node_modules/bootstrap/dist/js/bootstrap.js'></script>
-    <script src="js/index.js"></script>
+    <script src="js/internshipIndex.js"></script>
 </body>
 
 </html>
