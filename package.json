@@ -13,7 +13,10 @@
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.6",
     "jquery": "^3.3.1",
+    "object-assign": "^4.1.1",
+    "octicons": "^8.5.0",
     "sass": "^1.17.2",
-    "tether": "^1.4.5"
+    "tether": "^1.4.5",
+    "webpack": "^4.29.6"
   }
 }
